@@ -1,0 +1,141 @@
+@charset 'utf-8';
+html,
+body,
+div,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 100%;
+  vertical-align: middle;
+  outline: 0;
+  -webkit-text-size-adjust: auto;
+}
+html,body { margin: 0; height: 100%; }
+
+//* TEXTAREA
+textarea { resize: none;}
+
+//* FLOAT
+.fl { float: left; }
+.fr { float: right;}
+
+//* CURSOR
+.cursor-option { cursor: none;}
+
+//* SCROLL
+.no-scroll {overflow: hidden;}
+.hide-scroll {overflow: hidden;}
+
+//* FLEX
+.flex {display: flex;}
+.flex-horizontal {display: flex;}
+.flex-vertical {display: flex;flex-direction: column;}
+.flex-vertical-top-center {display: flex; flex-wrap: wrap; flex-direction: column; justify-content: flex-start; align-items: center;}
+.flex-center {display:flex; justify-content: center; align-items: center;}
+.flex-center-left {display:flex; justify-content: flex-start; align-items: center;}
+.flex-center-right {display:flex; justify-content: flex-end; align-items: center;}
+.flex-top-left {display:flex; justify-content: flex-start; align-items: flex-start;}
+.flex-top-right {display:flex; justify-content: flex-end; align-items: flex-start;}
+.flex-top-center {display:flex; justify-content: center; align-items: flex-start;}
+.flex-bottom-left {display:flex; justify-content: flex-start; align-items: flex-end;}
+.flex-bottom-right {display:flex; justify-content: flex-end; align-items: flex-end;}
+.flex-bottom-center {display:flex; justify-content: center; align-items: flex-end;}
+.flex-wrap {flex-wrap: wrap;}
+
+//* TEXT
+.tar {text-align: right;}
+.tal {text-align: left;}
+.tac {text-align: center;}
+
+//* FONT
+.bold {font-weight: bold;}
+
+//* POSITION
+.relative {position: relative;}
+.fixed {position: fixed;}
+.sticky {position: sticky;}
+.absolute {position: absolute;}
+
+//* SIZE
+.full-size {height: 100%;width: 100%;}
+.height-full-size {height: 100%;}
+.width-full-size {width: 100%;}
+ 
+//* DISPLAY
+.hide {display: none;}
+.block {display: block;}
+.inline-block {display:inline-block;}
+
+//* Box Shadow
+.shadow { box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.25);}
+
+
+//*border
+.border-grey {border : 1px solid grey;}
+
+.round {border-radius: 4px;}
+
