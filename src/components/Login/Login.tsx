@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
 import LoginForm from "./LoginForm";
-import "@Css/common.scss"
+
 const Login = () => {
 
         return ( 

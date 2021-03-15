@@ -1,4 +1,5 @@
 import React, {Fragment} from "react";
+import { useHistory } from "react-router-dom";
 
 const loginFormStyle = {
     width: "500px",
@@ -13,6 +14,10 @@ const marginStyle = {
 }
 
 const LoginForm = () => {
+    const history = useHistory();
+    const redirectMain = () => {
+        history.push("/home");
+    }
 
     return (
         <Fragment>
@@ -20,7 +25,9 @@ const LoginForm = () => {
                 <div id="margin-wrapper" style={marginStyle} className={"flex-vertical"} >
                     <input type="text"></input>
                     <input type="text"></input>
-                    <button>로그인</button>
+                    <button onClick={redirectMain}>
+                        로그인
+                    </button>
                 </div>
             </div>
         </Fragment>
