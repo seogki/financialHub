@@ -2,6 +2,7 @@
   "name": "financialhub",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://192.168.1.68:3000/",
   "dependencies": {
     "@babel/core": "7.12.3",
     "@craco/craco": "^6.1.1",
@@ -17,6 +18,7 @@
     "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
+    "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.0",
     "babel-loader": "8.1.0",
