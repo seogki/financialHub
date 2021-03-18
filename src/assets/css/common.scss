@@ -84,14 +84,13 @@ textarea { resize: none;}
 .fr { float: right;}
 
 //* CURSOR
-.cursor-option { cursor: none;}
+.cursor-none { cursor: none;}
 
 //* SCROLL
-.no-scroll {overflow: hidden;}
 .hide-scroll {overflow: hidden;}
 
 //* FLEX
-.flex {display: flex;}
+.flex {display: flex;} 
 .flex-horizontal {display: flex;}
 .flex-vertical {display: flex;flex-direction: column;}
 .flex-vertical-top-center {display: flex; flex-wrap: wrap; flex-direction: column; justify-content: flex-start; align-items: center;}
