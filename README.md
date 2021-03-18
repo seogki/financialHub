@@ -1,6 +1,6 @@
 # COIN-HUB
 
-TypeScript 기반 React + Node Js 웹 서비스!
+TypeScript 기반 React + Node Js 웹 서비스!!
 
 # STRUCTURE
 
