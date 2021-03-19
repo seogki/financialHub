@@ -22,11 +22,6 @@ class App{
         this.app.use(express.json());
         this.app.use(express.static(path.join(__dirname, 'public')));
 
-        // this.app.use((req: express.Request, res: express.Response) => {
-        // res.setHeader('Content-Type', 'application/json; charset=utf-8');
-        //     res.end(JSON.stringify(req.body, null, 2));
-        // });
-        
         this.app.get("/", (req: express.Request, res: express.Response) => {
             res.send("hello");
         });
