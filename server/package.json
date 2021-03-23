@@ -4,7 +4,7 @@
   "description": "Express Server for Diary",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha $(find ./ -name '*.ts') --recursive -w",
+    "test": "node_modules/.bin/mocha $(find ./ -name '*.spec.ts') --recursive -w -r ts-node/register",
     "start": "nodemon --watch src --delay 1 --exec ts-node src/www.ts",
     "build": "webpack --config webpack.config.js"
   },
@@ -15,7 +15,8 @@
     "@types/chai": "^4.2.15",
     "@types/cors": "^2.8.10",
     "@types/express": "^4.17.11",
-    "@types/mocha": "^8.2.1",
+    "@types/jest": "^26.0.21",
+    "@types/mocha": "^8.2.2",
     "chai": "^4.3.3",
     "cors": "^2.8.5",
     "mocha": "^8.3.1",

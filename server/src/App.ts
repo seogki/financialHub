@@ -2,10 +2,6 @@ import express = require('express');
 import cors from 'cors';
 import path from 'path';
 
-import http from 'http';
-import index from './Index';
-import bodyParser from 'body-parser';
-
 class App{
     public app: express.Application;
 
