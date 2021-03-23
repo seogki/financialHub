@@ -31,7 +31,7 @@ class App{
 
         this.app.post("/Acct", (req: express.Request, res: express.Response) => {
             const{
-                body: {id, password}
+                body: { id, password }
             } = req;
             
             res.json({
