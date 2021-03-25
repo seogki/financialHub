@@ -1,23 +1,11 @@
 import { useEffect, useState } from "react";
-
-const navigationStyle = {
-  width: "20%",
-};
-
-const mainStyle = {
-  width: "80%",
-};
+import "@Css/main.scss";
 
 const marginStyle = {
   width: "calc(100% - 32px)",
   height: "calc(100% - 32px)",
   margin: "16px",
   // border: "2px solid black",
-};
-
-const singleStyle = {
-  width: "10%",
-  textAlign: "center" as const,
 };
 
 const Main = () => {
@@ -38,20 +26,20 @@ const Main = () => {
   }, []);
 
   return (
-    <div className={"flex-horizontal full-size"}>
-      <div style={mainStyle}>
+    <div className={"main-desktop-layout full-size"}>
+      <div className={"navigation"}>
+        <div style={marginStyle}></div>
+      </div>
+      <div className={"main"}>
         <div style={marginStyle} className={"relative"}>
           <div className={"absolute flex-center flex-wrap full-size"}>
             {numbers.map((m, i) => (
-              <div style={singleStyle} key={i}>
+              <div className={"single flex-center"} key={i}>
                 {m}
               </div>
             ))}
           </div>
         </div>
-      </div>
-      <div style={navigationStyle}>
-        <div style={marginStyle}></div>
       </div>
     </div>
   );

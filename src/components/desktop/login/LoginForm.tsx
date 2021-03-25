@@ -2,14 +2,14 @@ import React, { Fragment, useState } from "react";
 import { useHistory } from "react-router-dom";
 
 const loginFormStyle = {
-  width: "500px",
+  width: "300px",
   height: "300px",
 };
 
 const marginStyle = {
-  width: "calc(100% - 32px)",
-  height: "calc(100% - 32px)",
-  margin: "16px",
+  width: "calc(100% - 16px)",
+  height: "calc(100% - 16px)",
+  margin: "8px",
   justifyContent: "center",
 };
 
@@ -69,7 +69,7 @@ const LoginForm = (user: User | undefined) => {
             value={password}
             onChange={onChange}
           />
-          <button onClick={redirectMain}>로그인</button>
+          <button onClick={redirectMain}>데스크탑</button>
         </div>
       </div>
     </Fragment>

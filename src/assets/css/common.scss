@@ -76,6 +76,8 @@ video {
 }
 html,body { margin: 0; height: 100%; }
 
+button {padding : 0; margin : 0;}
+
 //* TEXTAREA
 textarea { resize: none;}
 
@@ -138,3 +140,25 @@ textarea { resize: none;}
 
 .round {border-radius: 4px;}
 
+$breakpoint : 720px;
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(209, 209, 209);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(167, 167, 167);
+}

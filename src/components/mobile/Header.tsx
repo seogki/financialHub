@@ -2,9 +2,11 @@ import { Fragment } from "react";
 
 const headerStyle = {
   width: "100%",
-  height: "10%",
+  height: "5%",
   boxShadow: "0 6px 15px 0px grey",
   backgroundColor: "#f0f0f0",
+  color: "#3B2B3E",
+  fontWeight: "bold" as const,
 };
 
 const marginStyle = {

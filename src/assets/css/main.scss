@@ -1,0 +1,45 @@
+@import "./common.scss";
+
+$border: 0.5px solid #3b2b3e;
+
+.main-mobile-layout {
+  display: flex;
+  flex-direction: column;
+
+  .navigation {
+    width: 100%;
+    height: 10%;
+    div:first-of-type {
+      border-bottom: $border;
+    }
+  }
+  .main {
+    width: 100%;
+    height: 90%;
+    overflow-y: overlay;
+
+    .single {
+      width: 50%;
+      height: 10%;
+    }
+  }
+}
+
+.main-desktop-layout {
+  display: flex;
+
+  .navigation {
+    width: 10%;
+    height: 100%;
+    div:first-of-type {
+      border-right: $border;
+    }
+  }
+  .main {
+    width: 90%;
+    height: 100%;
+    .single {
+      width: 25%;
+    }
+  }
+}
