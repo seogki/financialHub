@@ -61,6 +61,7 @@ const LoginForm = (user: User | undefined) => {
             value={id}
             onChange={onChange}
           />
+
           <input
             id="password"
             name="password"
@@ -69,6 +70,7 @@ const LoginForm = (user: User | undefined) => {
             value={password}
             onChange={onChange}
           />
+
           <button onClick={redirectMain}>데스크탑</button>
         </div>
       </div>
