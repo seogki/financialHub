@@ -67,6 +67,7 @@ const LoginForm = (user: User | undefined) => {
             value={id}
             onChange={onChange}
           />
+
           <input
             id="password"
             name="password"

@@ -1,7 +1,7 @@
 import { ViewportProvider } from "@Utils/Viewport";
 import Detector from "@Utils/Detector";
 const App = () => (
-  <div className={"flex-vertical full-size"}>
+  <div className={"flex-vertical full-size auto-scroll full-size"}>
     <ViewportProvider>
       <Detector />
     </ViewportProvider>

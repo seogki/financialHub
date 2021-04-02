@@ -1,23 +1,27 @@
 import { Fragment } from "react";
-
+import LoginBtn from "@Components/fragment/button/Login";
 const headerStyle = {
   width: "100%",
-  height: "5%",
-  boxShadow: "0 6px 15px 0px grey",
-  backgroundColor: "#f0f0f0",
-  color: "#3B2B3E",
+  height: "7%",
+  // boxShadow: "0 6px 15px 0px grey",
+  backgroundColor: "white",
+  borderBottom: "1px solid #dbdbdb",
+  color: "#2196F3",
   fontWeight: "bold" as const,
 };
 
 const marginStyle = {
-  width: "calc(100% - 32px)",
-  height: "calc(100% - 32px)",
-  margin: "16px",
+  width: "calc(100% - 24px)",
+  height: "calc(100% - 24px)",
+  margin: "12px",
+  justifyContent: "space-between",
 };
 
 const titleStyle = {
-  marginLeft: "calc(10% - 16px)",
+  marginLeft: "3%",
 };
+
+const btnStyle = { marginRight: "3%" };
 
 const Header = () => {
   return (
@@ -25,7 +29,10 @@ const Header = () => {
       <div style={headerStyle}>
         <div style={marginStyle} className={"flex"}>
           <div className={"flex-center"} style={titleStyle}>
-            COIN HUB
+            TITLE
+          </div>
+          <div className={"flex-center"} style={btnStyle}>
+            <LoginBtn />
           </div>
         </div>
       </div>

@@ -90,6 +90,9 @@ textarea { resize: none;}
 
 //* SCROLL
 .hide-scroll {overflow: hidden;}
+.auto-scroll {overflow:auto;}
+.oy-scroll {overflow-y: auto;}
+
 
 //* FLEX
 .flex {display: flex;} 
@@ -131,6 +134,16 @@ textarea { resize: none;}
 .block {display: block;}
 .inline-block {display:inline-block;}
 
+.mr4 {margin-right: 4px;}
+.mr8 {margin-right: 8px;}
+.mr16 {margin-right: 16px;}
+.mra {margin-right: auto;}
+
+.mla {margin-left: auto;}
+.ml4 {margin-left: 4px;}
+.ml8 {margin-left: 8px;}
+.ml16 {margin-left: 16px;}
+
 //* Box Shadow
 .shadow { box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.25);}
 
@@ -141,6 +154,13 @@ textarea { resize: none;}
 .round {border-radius: 4px;}
 
 $breakpoint : 720px;
+$border-color : #dbdbdb;
+$main-color : #2196F3;
+$sub-color : #21CBF3;
+$default-color : black;
+$increase-color : #1998ff;
+$decrease-color : #fc1a1a;
+$border: 1px solid $border-color;
 
 /* width */
 ::-webkit-scrollbar {
