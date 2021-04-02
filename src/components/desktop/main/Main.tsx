@@ -31,7 +31,7 @@ const Main = () => {
     if (difference === 0) {
       return "변동없음";
     } else {
-      return `difference.toFixed(2) W`;
+      return `${difference.toFixed(2)} W`;
     }
   };
   useEffect(() => {
