@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import axios from "axios";
 import "@Css/main.scss";
 
@@ -8,9 +8,13 @@ const marginStyle = {
   margin: "16px",
 };
 
+interface Coins {
+  new: Array<any>;
+  old?: Array<any>;
+}
+
 const Main = () => {
-  const [newCoins, setNewCoins] = useState<Array<any>>([]);
-  const [oldCoins, setOldCoins] = useState<Array<any> | undefined>(undefined);
+  const [newCoins, setNewCoins] = useState<Coins>({ new: [], old: [] });
   const loadingRef = useRef<Boolean>(true);
   const [boxes, setBoxes] = useState<Array<number>>([]);
   const boxTest = () => {
@@ -22,6 +26,14 @@ const Main = () => {
   };
   const numberFormat = (number: number) => number.toLocaleString("ko-KR");
   const replace2Thumb = (url: string) => url.replace("/large/", "/thumb/");
+  const coinDifference = (newPrice: number, oldPrice: number) => {
+    const difference = oldPrice - newPrice;
+    if (difference === 0) {
+      return "변동없음";
+    } else {
+      return `difference.toFixed(2) W`;
+    }
+  };
   useEffect(() => {
     boxTest();
     const numberInterval = setInterval(() => {
@@ -35,16 +47,13 @@ const Main = () => {
             tmpArr.push(list[i]);
           }
           loadingRef.current = false;
-          setOldCoins(newCoins);
-          setNewCoins(tmpArr);
+          setNewCoins((prev) => ({ new: tmpArr, old: prev.new }));
         })
         .catch((err) => {
           console.log(err);
         });
-    }, 3000);
-    return () => {
-      clearInterval(numberInterval);
-    };
+    }, 10000);
+    return () => clearInterval(numberInterval);
   }, []);
 
   return (
@@ -60,7 +69,7 @@ const Main = () => {
         <div style={marginStyle} className={"relative"}>
           <div className={"absolute flex-vertical full-size "}>
             {!loadingRef.current ? (
-              newCoins.map((coin, i) => (
+              newCoins.new.map((coin, i) => (
                 <div className={"single-container flex-center"} key={coin.id}>
                   <div className={"img-container relative mr8"}>
                     <img
@@ -70,9 +79,20 @@ const Main = () => {
                     />
                   </div>
                   <div className={"name bold mr16"}>{coin.name} </div>
-                  {oldCoins && oldCoins[i] ? (
+                  {newCoins.old && newCoins.old[i] ? (
                     <div className={"old-price bold"}>
-                      <span>{numberFormat(oldCoins[i].current_price)}</span> W
+                      <span>{numberFormat(newCoins.old[i].current_price)}</span>{" "}
+                      W
+                    </div>
+                  ) : null}
+                  {newCoins.old && newCoins.old[i] ? (
+                    <div className={"measure-price bold"}>
+                      <span>
+                        {coinDifference(
+                          newCoins.new[i].current_price,
+                          newCoins.old[i].current_price
+                        )}
+                      </span>
                     </div>
                   ) : null}
                   <div className={"price mla bold"}>

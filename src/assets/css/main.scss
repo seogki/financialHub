@@ -73,6 +73,17 @@
           color: $default-color;
         }
       }
+      .measure-price {
+        text-align: end;
+        width: 20%;
+
+        .decrease {
+          color: $decrease-color;
+        }
+        .increase {
+          color: $increase-color;
+        }
+      }
     }
   }
   .sub {
